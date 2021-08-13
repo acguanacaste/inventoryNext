@@ -1,5 +1,5 @@
 import { createTheme } from '@material-ui/core/styles';
-import { red, blueGrey, grey, lightGreen } from '@material-ui/core/colors';
+import { red, blueGrey, grey, yellow } from '@material-ui/core/colors';
 
 // Create a theme instance.
 const theme = createTheme({
@@ -22,8 +22,8 @@ const theme = createTheme({
             primary : grey["50"],
             secondary: blueGrey["300"],
             contrastText : "#fff",
-            link: lightGreen["500"],
-            hover: lightGreen["300"]
+            link: yellow["600"],
+            hover: yellow["300"]
         },
         action: {
             active: "#fff",
@@ -39,6 +39,34 @@ const theme = createTheme({
             activatedOpacity: 0.24,
         }
     },
+    typography : {
+        fontFamily: '"Inter var", "Helvetica", "Arial", sans-serif',
+        fontWeightRegular: 350,
+        fontWeightLight: 250,
+        fontWeightMedium: 450,
+        fontWeightBold: 650,
+        h1 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        h2 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        h3 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        h4 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        h5 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        h6 : {
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+        },
+        
+        
+    
+    }
 });
 
 export default theme;

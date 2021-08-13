@@ -12,15 +12,16 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-const Link = ({href, children, ...props}) =>{
+const Link = ({href, target, children, ...props}) =>{
     const classes = useStyles(theme);
-    
+    const t = target?target:"_self";
     return(
         <NextLink href={href} >
-            <a {...props} className={classes.link}>
+            <a {...props} className={classes.link} target={t}>
                 {children}
             </a>
         </NextLink>
+        
     )
 }
 

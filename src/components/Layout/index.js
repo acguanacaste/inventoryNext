@@ -1,8 +1,12 @@
+import {Container} from "@material-ui/core";
+import TopMenu from "../TopMenu";
 const Layout = ({children}) => {
     return (
-        <div >
+        <Container maxWidth={"xl"} >
+            <TopMenu />
             {children}
-        </div>
+        </Container>
+        
     )
 }
 

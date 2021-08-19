@@ -1,4 +1,4 @@
-import Link from "../Link"
+import Link from "../Link";
 import {Box} from "@material-ui/core";
 
 const LanguageSwitch = () => {

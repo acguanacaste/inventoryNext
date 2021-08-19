@@ -1,4 +1,4 @@
-import {Container, Grid, Box} from "@material-ui/core";
+import {Container, Grid} from "@material-ui/core";
 import TopMenu from "../TopMenu";
 import LanguageSwitch from "../LanguageSwitch";
 
@@ -10,7 +10,7 @@ const Layout = ({children}) => {
                     <Grid item xs={6}>
                         <TopMenu />
                     </Grid>
-                    <Grid item xs alignSelf={"flex-end"}>
+                    <Grid item xs alignContent={"flex-end"}>
                         <LanguageSwitch />
                     </Grid>
                 </Grid>

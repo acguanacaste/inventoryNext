@@ -1,7 +1,7 @@
-import React from "react"
-import NextLink from 'next/link'
+import React from "react";
+import NextLink from 'next/link';
 import {makeStyles} from "@material-ui/core";
-import theme from "../../theme/theme"
+import theme from "../../theme/theme";
 
 const useStyles = makeStyles((theme) => ({
     link : {

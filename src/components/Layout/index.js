@@ -10,7 +10,7 @@ const Layout = ({children}) => {
                     <Grid item xs={6}>
                         <TopMenu />
                     </Grid>
-                    <Grid item xs alignContent={"flex-end"}>
+                    <Grid item xs container alignContent={"flex-end"}>
                         <LanguageSwitch />
                     </Grid>
                 </Grid>

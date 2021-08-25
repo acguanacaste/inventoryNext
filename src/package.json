@@ -1,18 +1,25 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "yarn run i18n && next dev",
+    "build": "yarn run i18n && next build",
     "start": "next start",
-    "lint" : "next lint"
+    "lint": "next lint",
+    "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/es.json",
+    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
+    "i18n": "yarn run extract:i18n && yarn run compile:i18n"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.20.10"
   },
   "devDependencies": {
+    "@formatjs/cli": "^4.2.32",
+    "babel-plugin-formatjs": "^10.3.6",
+    "babel-plugin-react-intl": "^8.2.25",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1"
   }

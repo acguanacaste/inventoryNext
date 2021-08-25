@@ -6,7 +6,7 @@ import theme from '../theme/theme';
 export default class MyDocument extends Document {
     render() {
         return (
-            <Html lang="en">
+            <Html lang={this.props.locale}>
                 <Head>
                     {/* PWA primary color */}
                     <meta name="theme-color" content={theme.palette.primary.main} />
@@ -56,7 +56,7 @@ MyDocument.getInitialProps = async (ctx) => {
     // Render app and page and get the context of the page with collected side effects.
     const sheets = new ServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
-    
+    const locale = ctx.locale;
     ctx.renderPage = () =>
         originalRenderPage({
             enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
@@ -68,5 +68,6 @@ MyDocument.getInitialProps = async (ctx) => {
         ...initialProps,
         // Styles fragment is rendered after the app and page rendering finish.
         styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+        locale
     };
 };

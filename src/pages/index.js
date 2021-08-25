@@ -1,20 +1,30 @@
 import Head from 'next/head'
 import {Typography} from "@material-ui/core";
 import Layout from "../components/Layout";
-
-export default function Home() {
+import Link from "../components/Link";
+import {FormattedMessage} from "react-intl";
+export default function Home(props) {
+    
     return (
         <Layout>
             <Head>
                 <title>Create Next App</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
+            <nav>
+            
+            </nav>
             <main className="">
-                <Typography variant={"h3"}>Welcome to the ACG Biodiversity Inventory </Typography>
+                <Typography variant={"h3"}>
+                    <FormattedMessage
+                        defaultMessage="Bienvenido al Inventario de Biodiversidad de ACG"
+                    />
+                </Typography>
                 <Typography>
-                    This is some random text
+                    <FormattedMessage defaultMessage="Este es un texto aleatorio" /> <Link href={"#"}>Test</Link>
                 </Typography>
             </main>
         </Layout>
     )
 }
+

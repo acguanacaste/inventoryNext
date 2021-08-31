@@ -22,6 +22,7 @@ export default function Home(props) {
                 </Typography>
                 <Typography>
                     <FormattedMessage defaultMessage="Este es un texto aleatorio" /> <Link href={"#"}>Test</Link>
+                    <FormattedMessage defaultMessage="ACG contiene cuatro ecosistemas tropicales unidos: marino-costero, bosque seco, bosuqe nuboso y bosque lluvioso" />
                 </Typography>
             </main>
         </Layout>

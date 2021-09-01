@@ -21,7 +21,7 @@ if (process.argv.length >= 4) {
     const getCache = (languageKey) => {
         try {
             dicc[languageKey] = {};
-            let fileContent = fs.readFileSync(`./cache/translateCache-${languageKey}.txt`, 'utf-8').split('\n');
+            let fileContent = fs.readFileSync(`./content/translations/translateCache-${languageKey}.txt`, 'utf-8').split('\n');
             fileContent.map((line)=> {
                 let cached = line.split('|');
                 if(cached[0]) dicc[languageKey][cached[0]] = cached[1];
@@ -37,7 +37,7 @@ if (process.argv.length >= 4) {
         if (!fs.existsSync("./cache")){
                 fs.mkdirSync("./cache")
         }
-        fs.appendFileSync(`./cache/translateCache-${languageKey}.txt`, line);
+        fs.appendFileSync(`./content/translations/translateCache-${languageKey}.txt`, line);
         return translation;
     }
 

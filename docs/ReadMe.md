@@ -22,4 +22,7 @@ To implement internalization we are using: `next/router` for locale routing, `re
 
 When writing components use `<FormattedMessage defaultMessage="Este es el texto del mensaje" />` to display content that will be translated. The message should be Spanish that is the default language for the project. 
 
+### Translation Cache
+
+The [`translate-json`](../src/utils/translator/translate-json.js) script will generate a translation cache in the [`content/translations`](../src/content/translations) folder. This serves two purposes: 1) reduce Google Translate Api calls by caching translations. 2) Allow you to tweak translations. You can edit this files to tweak the automatic translation, just be aware that if you change the default message, you will need to adjust the translation, as this is done by message.  
 

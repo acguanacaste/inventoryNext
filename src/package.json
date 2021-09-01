@@ -6,7 +6,7 @@
     "start": "next start",
     "lint": "next lint",
     "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/es.json",
-    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
+    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/locales/compiled",
     "translate": "utils/translator/translate-json.js ./content/locales/es.json en ./content/locales",
     "i18n": "yarn run extract:i18n && yarn translate && yarn run compile:i18n"
   },

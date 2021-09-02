@@ -4,6 +4,7 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../theme/theme';
 
 export default class MyDocument extends Document {
+    
     render() {
         return (
             <Html lang={this.props.locale}>
@@ -20,8 +21,8 @@ export default class MyDocument extends Document {
                     />
                 </Head>
                 <body>
-                <Main />
-                <NextScript />
+                    <Main />
+                    <NextScript />
                 </body>
             </Html>
         );

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from "../theme/theme";
+import "./app.css"
 import English from '../content/locales/compiled/en.json';
 import Spanish from '../content/locales/compiled/es.json';
 import {useRouter} from "next/router";

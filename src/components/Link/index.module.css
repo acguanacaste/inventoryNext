@@ -1,0 +1,7 @@
+.ilink, .ilink:visited{
+    color:#fdd835;
+    text-decoration: none;
+}
+.ilink:hover {
+    color: #fff176;
+}

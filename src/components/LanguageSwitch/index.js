@@ -4,7 +4,7 @@ import {Box} from "@material-ui/core";
 const LanguageSwitch = () => {
     return (
         <Box textAlign={"right"} justifyContent="flex-end" flexDirection={"row"} >
-            <Link href={"#"}>ES</Link> | <Link href={"#"}>EN</Link>
+            <Link href={"/"} locale="es">ES</Link> | <Link href={"/"} locale={"en"}>EN</Link>
         </Box>
     )
 }

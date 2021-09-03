@@ -1,0 +1,38 @@
+{
+  "name": "inventorynext",
+  "version": "1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "yarn run i18n && next dev",
+    "build": "yarn run i18n && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/es.json",
+    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/locales/compiled",
+    "translate": "utils/translator/translate-json.js ./content/locales/es.json en ./content/locales",
+    "i18n": "yarn run extract:i18n && yarn translate && yarn run compile:i18n"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "babel-plugin-styled-components": "^1.13.2",
+    "clsx": "^1.1.1",
+    "next": "latest",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.20.10"
+  },
+  "devDependencies": {
+    "@formatjs/cli": "^4.2.32",
+    "@google-cloud/translate": "^6.2.7",
+    "babel-plugin-formatjs": "^10.3.6",
+    "babel-plugin-react-intl": "^8.2.25",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "superagent": "^6.1.0",
+    "superagent-promise": "^1.1.0"
+  }
+}

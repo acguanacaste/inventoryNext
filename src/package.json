@@ -1,4 +1,7 @@
 {
+  "name": "inventorynext",
+  "version": "1.0",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "yarn run i18n && next dev",
